@@ -10,7 +10,7 @@
  */
 
 package com.snailark.userregistration.util;
-
+	
 public class EmailValidator {
 
 	public static boolean validateEmail(String mailid) {

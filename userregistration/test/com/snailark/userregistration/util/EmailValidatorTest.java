@@ -57,6 +57,7 @@ public class EmailValidatorTest {
 		boolean isValid = emailValidator.validateEmail("npan@gmail.com");
 		assertTrue("Valid email with two char domain name is not passed.", isValid);
 	}
+	
 
 	@Test
 	public void testValidateEmailNotAllowMoreThanOneDot() {
