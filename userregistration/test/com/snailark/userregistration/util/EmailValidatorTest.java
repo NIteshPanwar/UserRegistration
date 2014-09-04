@@ -47,6 +47,12 @@ public class EmailValidatorTest {
 	}
 	
 	@Test
+	public void testValidateEmailStartingWithNumber(){
+		boolean isValid = emailValidator.validateEmail("8npan@gmail.com");
+		assertFalse("NOT Valid email starting letter is number.", isValid);
+	}
+	
+	@Test
 	public void testValidateEmailWithDot(){
 		boolean isValid = emailValidator.validateEmail("npan@gmail.com");
 		assertTrue("Valid email with two char domain name is not passed.", isValid);
@@ -54,8 +60,8 @@ public class EmailValidatorTest {
 
 	@Test
 	public void testValidateEmailNotAllowMoreThanOneDot(){
-		boolean isValid = emailValidator.validateEmail("np@an@gmail.com");
-		assertFalse("NOT Valid email with two @ passed.", isValid);
+		boolean isValid = emailValidator.validateEmail("np.an@gmail.com");
+		assertFalse("NOT Valid email with two . passed.", isValid);
 	}
 
 }
